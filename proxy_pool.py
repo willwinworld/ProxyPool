@@ -35,7 +35,8 @@ class Proxy(object):
                 address = j('td:eq(2)').text().encode('ISO-8859-1', 'ignore')
                 # print address
                 check_time = j('td:eq(4)').text()
-                container.append({'ip': ip, 'port': port, 'address': address, 'check_time': check_time})
+                container.append({'ip': ip, 'port': port, 'address': address, 'check_time': check_time, 'country': 'china'})
+
                 # print check_time
                 # print j('td').text().encode('ISO-8859-1', 'ignore')
         return container
@@ -54,6 +55,7 @@ class Proxy(object):
                 if r.status_code == 200:
                     end_time = datetime.now()
                     time_diff = end_time - start_time
+                    logger.info(c['address'])
                     logger.info(c['ip'] + ':' + c['port'])
                     logger.info(time_diff)
                     c['time_diff'] = time_diff

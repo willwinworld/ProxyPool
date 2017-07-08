@@ -1,0 +1,10 @@
+# log file
+log
+dialogue
+
+# database
+.sqlite
+
+# pyc
+.pyc
+

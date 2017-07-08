@@ -16,6 +16,7 @@ class ProxyTable(BaseModel):
     """不写主键，将成为自增主键"""
     ip = CharField(null=True, max_length=255, verbose_name='ip')
     port = CharField(null=True, max_length=255, verbose_name='port')
+    country = CharField(null=True, max_length=255, verbose_name='country')
     address = CharField(null=True, max_length=255, verbose_name='address')
     check_time = CharField(null=True, max_length=255, verbose_name='check_time')
     time_diff = CharField(null=True, max_length=255, verbose_name='time_diff')
