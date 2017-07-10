@@ -8,3 +8,5 @@ dialogue
 # pyc
 .pyc
 
+# password
+restful_password.py
